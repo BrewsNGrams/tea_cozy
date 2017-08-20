@@ -114,3 +114,9 @@ address {
   font-style: normal;
   height: 200px;
 }
+
+footer {
+  text-align: left;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}

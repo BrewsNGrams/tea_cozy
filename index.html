@@ -6,6 +6,9 @@
     <link rel="stylesheet" type="text/css" href="resources/css/style.css">
   </head>
   <body>
+
+    <!-- Flexbox header. No space-between. Worked with 'center' and text align right for the nav tag. Still not sure I understand why....
+    Figured it out!! Applying flex-grow: 1 ensures the nav fills all vailable space between the logo and the a elements!!-->
     <header class="flex-container">
 
       <img src="resources\imgs\img-tea-cozy-logo.png" alt="">
@@ -19,6 +22,7 @@
 
     </header>
 
+    <!--Main container for website content. Flexbox-->
     <main>
       <section id="mission" class="flex-container">
         <div class="banner">
@@ -29,12 +33,16 @@
         </div>
       </section>
 
+
+      <!--Product selection section. 'products' is a flexbox-->
       <section id="store">
 
         <h2>Tea of the Month</h2>
         <h4>What's Steeping at the Tea Cozy?</h4>
 
         <div class="flex-container products">
+
+          <!-- No need to make 'items' column flexboxes. 'block' display ensures img and description stack-->
 
           <div class="item">
 
@@ -74,13 +82,15 @@
         </div>
       </section>
 
+      <!-- Locations scetion. Flexbox necesary to center and align 'location' boxes.-->
+
       <section id="locations">
 
         <h2>Locations</h2>
 
         <div class="flex-container locations">
 
-
+        <!--display block works very similarly for the 'location' boxes. What advantage does the flexbox add?-->
         <div class="location">
           <h3>Downtown</h3>
           <p>384 West 4th St</p>
@@ -104,11 +114,17 @@
       </div>
       </section>
 
+      <!--address seems more semantic here. remember to set font-style to 'normal' as address renders 'italic' as default-->
+
       <address id="contact">
 
         <h2>Tea Cozy</h2>
-        <h5>contact@theteacozy.com</h5>
-        <h5>917-555-8904</h5>
+        <h5>
+          <a href="mailto:contact@theteacozy.com">contact@theteacozy.com</a>
+        </h5>
+        <h5>
+          <a href="tel:9175558904">917-555-8904</a>
+        </h5>
 
       </address>
     </main>

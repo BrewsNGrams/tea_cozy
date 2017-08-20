@@ -1,3 +1,4 @@
+/*sets color, background, font size, margins, and font for bulk of the page, ensuring less repetition of code*/
 body {
   display: block;
   font-family: helvetica;
@@ -8,12 +9,15 @@ body {
   margin: 0px
 }
 
+
+/*flex-container class = more effiicient way of making various sections into flexboxes*/
 .flex-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
+/*z-index= 'depth' higher numbers appear 'on top of other element'. Width must be set to 100% in order to ensure a header goes across entire top of page*/
 header {
   width: 100%;
   position: fixed;
@@ -87,6 +91,7 @@ span {
   font-weight: bold;
 }
 
+/* ../../-goes up 2 directories. Necessary to reach images whenever you use the project_name/resources/imgs directory structure*/
 #locations {
   background-image: url(../../resources/imgs/img-locations-background.jpg);
   height: 500px;
@@ -99,6 +104,8 @@ span {
   margin: auto;
 }
 
+
+/*more efficient way of setting location black boxes*/
 .location {
   opacity: 1;
   background-color: black;
